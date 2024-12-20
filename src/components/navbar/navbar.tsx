@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Navbar = () => {
     return (
-        <nav className='border w-full fixed top-0 border-b flex items-center px-6 py-5'>
+        <nav className='border w-full fixed top-0 border-b flex items-center px-6 py-5 bg-white'>
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
             <div className="flex items-center space-x-6">

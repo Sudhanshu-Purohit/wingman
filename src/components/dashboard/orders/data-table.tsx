@@ -50,14 +50,14 @@ const DataTable = () => {
     })
 
     return (
-        <div className="rounded-xl border">
+        <div className="rounded-xl border overflow-hidden">
             <Table>
                 <TableHeader>
                     {table.getHeaderGroups().map((headerGroup) => (
                         <TableRow key={headerGroup.id}>
                             {headerGroup.headers.map((header) => {
                                 return (
-                                    <TableHead key={header.id} className="px-4 py-3">
+                                    <TableHead key={header.id} className="px-4 py-3 bg-muted/30">
                                         {header.isPlaceholder
                                             ? null
                                             : flexRender(

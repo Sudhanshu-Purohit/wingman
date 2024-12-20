@@ -3,15 +3,11 @@
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Separator } from '../ui/separator';
-import { SidebarTrigger } from '../ui/sidebar';
 
 const Navbar = () => {
     const pathname = usePathname();
     return (
         <nav className='border w-full fixed top-0 border-b flex items-center px-6 py-5 bg-white z-10'>
-            <SidebarTrigger className="-ml-1" />
-            <Separator orientation="vertical" className="mr-2 h-4" />
             <div className="flex items-center space-x-6">
                 <Link
                     href="/"

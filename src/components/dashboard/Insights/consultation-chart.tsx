@@ -34,10 +34,10 @@ const ConsultationChart = ({ weeklyData }: ConsultationChartProps) => {
                         <YAxis
                             axisLine={false}
                             tickLine={false}
-                            dx={-10}
+                            dx={-15}
                             tick={{ fill: '#94A3B8', fontSize: 12 }}
                             ticks={[10, 20, 30, 40, 50, 60]}
-                            domain={[0, 60]}
+                            domain={[10, 60]}
                             yAxisId="left"
                             label={{ value: 'CONSULTATIONS', angle: -90, position: 'insideLeft', style: { textAnchor: 'middle', fill: '#94A3B8', fontSize: 8, opacity: 0.7 } }}
                         />
@@ -56,20 +56,6 @@ const ConsultationChart = ({ weeklyData }: ConsultationChartProps) => {
                             dataKey="experts"
                             fill="#FEF9C3"
                             yAxisId="right"
-                            barSize={20}
-                            radius={[4, 4, 0, 0]}
-                        />
-                        <Bar
-                            dataKey="incoming"
-                            fill="#94A3B8"
-                            yAxisId="left"
-                            barSize={20}
-                            radius={[4, 4, 0, 0]}
-                        />
-                        <Bar
-                            dataKey="answered"
-                            fill="#15B79E"
-                            yAxisId="left"
                             barSize={20}
                             radius={[4, 4, 0, 0]}
                         />

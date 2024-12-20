@@ -16,7 +16,7 @@ export function DataTableRowActions<TData>({
 
     return (
         <div>
-            <span>view chat</span>
+            <span className='text-muted-foreground'>view chat</span>
         </div>
     )
 }

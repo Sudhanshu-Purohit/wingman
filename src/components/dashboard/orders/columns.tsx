@@ -6,6 +6,11 @@ import { DataTableColumnHeader } from './data-table-column-header';
 import { DataTableRowActions } from './data-table-row-actions';
 import Image from 'next/image';
 
+type Product = {
+    name: string;
+    image: string;
+}
+
 export const columns: ColumnDef<OrdersSchema>[] = [
     {
         accessorKey: 'product',
@@ -13,7 +18,7 @@ export const columns: ColumnDef<OrdersSchema>[] = [
             <DataTableColumnHeader column={column} title="Product" />
         ),
         cell: ({ row }) => {
-            const product = row.getValue('product');
+            const product: Product = row.getValue('product');
             return (
                 <div className="flex items-center space-x-3">
                     <div className="">

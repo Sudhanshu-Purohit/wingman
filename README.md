@@ -3,7 +3,7 @@
 A modern frontend implementation of a Figma design using Next.js and cutting-edge web technologies.
 
 ## 🔥 Live Demo
-Experience the live demo [here](https://example.com).
+Experience the live demo <a href="https://wingman-sudhanshu-purohits-projects-3915cf69.vercel.app/" target="_blank">here</a>.
 
 ---
 

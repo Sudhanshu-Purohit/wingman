@@ -21,10 +21,10 @@ const comparisonData = [
 
 const Insights = () => {
     return (
-        <div className='w-full flex flex-col gap-8'>
-            <h2 className='text-xl font-medium'>Insights</h2>
+        <div className="w-full flex flex-col gap-8">
+            <h2 className="text-xl font-medium">Insights</h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
                 <ConsultationChart weeklyData={weeklyData} />
                 <PastPeriods comparisonData={comparisonData} />
                 <Forecast />

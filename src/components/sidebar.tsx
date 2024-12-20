@@ -1,10 +1,9 @@
 'use client';
 import Link from 'next/link';
-// import { ChatBubbleLeftIcon } from '@heroicons/react/24/outline';
 
 export default function Sidebar() {
     return (
-        <div className="fixed left-0 top-0 h-full w-16 bg-[#115E56] flex flex-col items-center py-4 space-y-8 border-r border-[#DCDFE4] z-10">
+        <div className="fixed hidden left-0 top-0 h-full w-16 bg-[#115E56] sm:flex flex-col items-center py-4 space-y-8 border-r border-[#DCDFE4] z-10">
             {/* Logo */}
             <div className="w-[33.2px] h-[33.2px] bg-gradient-to-br from-white/80 to-[#09544D] rounded-[5.2px] flex items-center justify-center relative">
 

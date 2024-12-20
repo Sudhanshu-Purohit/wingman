@@ -27,9 +27,9 @@ export function DataTableRowActions<TData>({
                     <MoveUpRight className="h-4 w-4" />
                 </Button>
             </DialogTrigger>
-            <DialogContent className="max-w-4xl h-[80vh] flex flex-col">
+            <DialogContent className="max-w-[95vw] flex flex-col md:max-w-4xl h-[90vh] md:h-[70vh] p-2 md:p-6">
                 <DialogHeader>
-                    <DialogTitle>Order Details & Chat</DialogTitle>
+                    <DialogTitle className="px-2">Order Details & Chat</DialogTitle>
                 </DialogHeader>
                 <OrderChatDialog order={order} />
             </DialogContent>

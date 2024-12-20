@@ -1,6 +1,5 @@
 import DataTable from "./data-table"
 
-
 const Orders = () => {
     return (
         <div className='w-full flex flex-col gap-8'>

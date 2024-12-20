@@ -3,6 +3,7 @@ import Increase from "@/assets/increase.png";
 import { cn } from '@/lib/utils';
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { getSvgIcon } from "@/lib/get-svg-icon";
 
 const mockStats = [
     {
@@ -45,9 +46,10 @@ const mockStats = [
 
 const DashboardHero = () => {
     return (
-        <div className='w-full flex flex-col gap-8'>
-            <div className='flex justify-between items-center'>
-                <h2 className='text-xl font-medium'>At a glance</h2>
+        <div className="w-full flex flex-col gap-6 ">
+            {/* Header Section */}
+            <div className="flex flex-wrap justify-between items-center gap-4">
+                <h2 className="text-lg sm:text-xl font-medium">At a glance</h2>
                 <select className="px-4 py-2 bg-white rounded-lg text-sm text-gray-600 border border-gray-200">
                     <option value="7">7 days</option>
                     <option value="14">14 days</option>
@@ -56,19 +58,21 @@ const DashboardHero = () => {
                 </select>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-3">
+            {/* Stats Cards */}
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {mockStats.map((stat, index) => (
-                    <Card key={index} className='shadow-sm rounded-xl'>
+                    <Card key={index} className="shadow-sm rounded-xl">
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                            <CardTitle className="text-xs font-medium text-muted-foreground">
+                            <CardTitle className="text-xs flex gap-2 items-center font-medium text-muted-foreground truncate">
+                                {getSvgIcon(stat.title)}
                                 {stat.title}
                             </CardTitle>
                         </CardHeader>
-                        <CardContent >
-                            <p className="text-2xl font-semibold pb-1">
+                        <CardContent>
+                            <p className="text-xl sm:text-2xl font-semibold pb-1">
                                 {stat.value}
                             </p>
-                            <div className='flex items-center'>
+                            <div className="flex items-center">
                                 {stat.percentageChange > 0 ? (
                                     <Image width={15} height={15} src={Increase} alt="arrow-up" />
                                 ) : (
@@ -78,8 +82,10 @@ const DashboardHero = () => {
                                     stat.percentageChange > 0 ? "text-green-500" : "text-red-500",
                                     "text-xs ml-2"
                                 )}>
-                                    {stat.percentageChange < 0 ? -stat.percentageChange + "%" : stat.percentageChange + "%"} {" "}
-                                    <span className="text-xs text-muted-foreground">{stat.percentageChange > 0 ? " increase" : " decrease"}</span>
+                                    {stat.percentageChange < 0 ? -stat.percentageChange + "%" : stat.percentageChange + "%"}{" "}
+                                    <span className="text-xs text-muted-foreground">
+                                        {stat.percentageChange > 0 ? "increase" : "decrease"}
+                                    </span>
                                 </p>
                             </div>
                         </CardContent>
@@ -87,7 +93,7 @@ const DashboardHero = () => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default DashboardHero
+export default DashboardHero;

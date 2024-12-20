@@ -6,7 +6,7 @@ const productSchema = z.object({
 });
 
 export const ordersSchema = z.object({
-    // id: z.string(),
+    id: z.string(),
     product: productSchema,
     date: z.string(), 
     time: z.string(), 

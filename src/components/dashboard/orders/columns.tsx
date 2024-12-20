@@ -16,10 +16,10 @@ export const columns: ColumnDef<OrdersSchema>[] = [
             const product = row.getValue('product');
             return (
                 <div className="flex items-center space-x-3">
-                    <div className="flex-shrink-0">
+                    <div className="">
                         <Image
-                            width={40}
-                            height={20}
+                            width={70}
+                            height={60}
                             src={product.image}
                             alt="Product"
                             className="object-cover rounded-md border border-gray-200"
